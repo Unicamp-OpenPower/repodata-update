@@ -25,7 +25,7 @@ conda install conda-build
 sudo apt-get install lftp
 
 # Get the files
-wget -P $HOME/miniconda/repo https://oplab9.parqtec.unicamp.br/pub/ppc64el/power-ai/linux-ppc64le/
+wget -r -np -nH --cut-dirs=4 -R "index.html*" -P $HOME/miniconda/repo https://oplab9.parqtec.unicamp.br/pub/ppc64el/power-ai/linux-ppc64le/
 
 # Generate conda index
 cd $HOME/miniconda/repo

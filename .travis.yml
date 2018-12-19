@@ -1,0 +1,16 @@
+jobs:
+  include:
+
+    # Update index (repodata.json)
+    - stage: repodata.json
+      language: generic
+      os: linux
+
+      install:
+          # Install necessary packages and generate repodata
+          - ./ci_support/index_update.sh
+
+      script:
+          # Upload repodata to UNICAMP FTP
+          - ls -l $HOME/miniconda/repo/*.json
+          - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./ci_support/ftp_upload.sh; fi' # Upload build_artifacts to UNICAMP FTP

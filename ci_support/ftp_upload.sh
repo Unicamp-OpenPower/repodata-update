@@ -4,9 +4,9 @@ set -e
 
 FTP_HOST='oplab9.parqtec.unicamp.br'
 LOCALPATH=$HOME/miniconda/repo
-REMOTEPATH='/ppc64el/power-ai'
+REMOTEPATH='/ppc64el/power-ai/linux-ppc64le'
 
-# Upload .tar.bz2 file from LOCALPATH to REMOTEPATH
+# Upload json file from LOCALPATH to REMOTEPATH
 lftp -f "
 set dns:order "inet"
 set xfer:use-temp-file yes

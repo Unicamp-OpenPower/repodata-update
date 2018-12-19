@@ -13,4 +13,5 @@ jobs:
       script:
           # Upload repodata to UNICAMP FTP
           - ls -l $HOME/miniconda/repo/*.json
+          - cat $HOME/miniconda/repo/*.json
           - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./ci_support/ftp_upload.sh; fi' # Upload build_artifacts to UNICAMP FTP

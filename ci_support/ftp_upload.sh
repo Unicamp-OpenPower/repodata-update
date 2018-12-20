@@ -10,6 +10,7 @@ echo "Starting upload..."
 
 # Upload json file from LOCALPATH to REMOTEPATH
 lftp -d -u $FTP_USER,$FTP_PASSWORD $FTP_HOST << EOF
+set ftp:ssl-auth SSL
 set dns:order inet
 set net:timeout 15
 set net:reconnect-interval-base 5

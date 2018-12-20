@@ -4,7 +4,7 @@ set -e
 
 FTP_HOST='oplab9.parqtec.unicamp.br'
 LOCALPATH=$HOME/miniconda/repo
-REMOTEPATH='/ppc64el/power-ai/linux-ppc64le'
+REMOTEPATH='/ppc64el/power-ai/'
 
 # Upload json file from LOCALPATH to REMOTEPATH
 lftp -f "

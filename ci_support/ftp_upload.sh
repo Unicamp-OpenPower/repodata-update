@@ -7,7 +7,7 @@ LOCALPATH=$HOME/miniconda/repo/linux-ppc64le
 REMOTEPATH='/ppc64el/power-ai/linux-ppc64le'
 
 # Upload json file from LOCALPATH to REMOTEPATH
-lftp -f "
+lftp -e "
 set dns:order "inet"
 set net:timeout 15
 set net:reconnect-interval-base 5

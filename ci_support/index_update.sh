@@ -29,4 +29,4 @@ wget -r -np -nH --cut-dirs=3 -R "index.html*" -P $HOME/miniconda/repo https://op
 
 # Generate conda index
 cd $HOME/miniconda/repo
-conda index . -n powerai --verbose
+conda index . -n PowerAI

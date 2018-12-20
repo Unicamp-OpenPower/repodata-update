@@ -1,7 +1,10 @@
 deploy:
   provider: releases
   api_key: $TOKEN
-  file: $HOME/miniconda/repo/linux-ppc64le/repodata*
+  file:
+    - $HOME/miniconda/repo/linux-ppc64le/repodata.json
+    - $HOME/miniconda/repo/linux-ppc64le/repodata2.json
+    - $HOME/miniconda/repo/linux-ppc64le/repodata.json.bz2
   skip_cleanup: true
   # draft: true
 

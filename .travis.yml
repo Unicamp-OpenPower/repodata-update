@@ -3,8 +3,7 @@ deploy:
   api_key: $TOKEN
   file: $HOME/miniconda/repo/linux-ppc64le/repodata*
   skip_cleanup: true
-  on:
-    tags: true
+  # draft: true
 
 jobs:
   include:

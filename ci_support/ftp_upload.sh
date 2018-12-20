@@ -3,12 +3,15 @@
 set -e
 
 FTP_HOST='oplab9.parqtec.unicamp.br'
-LOCALPATH=$HOME/miniconda/repo
+LOCALPATH=$HOME/miniconda/repo/test
 REMOTEPATH='/ppc64el/power-ai/'
 
 # Upload json file from LOCALPATH to REMOTEPATH
 lftp -f "
 set dns:order "inet"
+set net:timeout 15;
+set net:reconnect-interval-base 5;
+set net:max-retries 2;
 set xfer:use-temp-file yes
 set xfer:temp-file-name *.tmp
 open ftp://$FTP_HOST
